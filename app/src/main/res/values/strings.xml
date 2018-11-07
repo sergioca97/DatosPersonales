@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Datos personales</string>
+    <string name="txtNombre">Nombre:</string>
+    <string name="edtNombre">Escriba aquí su Nombre</string>
+    <string name="txtApellidos">Apellidos:</string>
+    <string name="edtApellidos">Escriba aquí sus Apellidos</string>
+    <string name="txtEdad">Edad:</string>
+    <string name="edtEdad">Escriba aquí su Edad</string>
+    <string name="txtGenero">Genero:</string>
+    <string name="radHombre">Hombre</string>
+    <string name="radMujer">Mujer</string>
+    <string name="txtEstadoCivil">Estado Civil:</string>
+    <string name="txtHijos">Hijos:</string>
+    <string name="txtGenerar">Generar</string>
+</resources>

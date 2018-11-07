@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">PracticaT2</string>
+    <string name="txtNombre">Name:</string>
+    <string name="edtNombre">Write your name here</string>
+    <string name="txtApellidos">Surnames:</string>
+    <string name="edtApellidos">Write your last name here</string>
+    <string name="txtEdad">Age:</string>
+    <string name="edtEdad">Write your age here</string>
+    <string name="txtGenero">Gender:</string>
+    <string name="radHombre">Man</string>
+    <string name="radMujer">Woman</string>
+    <string name="txtEstadoCivil">Civil Status</string>
+    <string name="txtHijos">Children:</string>
+    <string name="txtGenerar">Generate</string>
+</resources>
