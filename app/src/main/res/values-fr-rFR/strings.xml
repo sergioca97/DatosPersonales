@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Datos personales</string>
+    <string name="app_name">Datos personale</string>
     <string name="txtNombre">Nom:</string>
     <string name="edtNombre">Écris ton nom ici</string>
     <string name="txtApellidos">Le nom:</string>
