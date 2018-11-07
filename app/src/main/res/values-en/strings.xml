@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">PracticaT2</string>
+    <string name="app_name">Datos personales</string>
     <string name="txtNombre">Name:</string>
     <string name="edtNombre">Write your name here</string>
     <string name="txtApellidos">Surnames:</string>

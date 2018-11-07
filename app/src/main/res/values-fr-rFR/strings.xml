@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Datos personales</string>
+    <string name="txtNombre">Nom:</string>
+    <string name="edtNombre">Écris ton nom ici</string>
+    <string name="txtApellidos">Le nom:</string>
+    <string name="edtApellidos">Écris ton nom de famille ici</string>
+    <string name="txtEdad">Âge</string>
+    <string name="edtEdad">Écris ton âge ici</string>
+    <string name="txtGenero">Genre:</string>
+    <string name="radHombre">Homme</string>
+    <string name="radMujer">"Femme "</string>
+    <string name="txtEstadoCivil">État civil:</string>
+    <string name="txtHijos">Les enfants:</string>
+    <string name="txtGenerar">Générer</string>
+</resources>
