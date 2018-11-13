@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Datos personales</string>
+    <string name="app_name" translatable="false">Datos personales</string>
     <string name="txtNombre">Nombre:</string>
     <string name="edtNombre">Escriba aquí su Nombre</string>
     <string name="txtApellidos">Apellidos:</string>
@@ -12,4 +12,16 @@
     <string name="txtEstadoCivil">Estado Civil:</string>
     <string name="txtHijos">Hijos:</string>
     <string name="txtGenerar">Generar</string>
+    <string name="Vacio" translatable="false">""</string>
+    <string name="Casado">Casado</string>
+    <string name="Separado">Separado</string>
+    <string name="Viudo">Viudo</string>
+    <string name="Otro">Otro</string>
+    <string name="TieneHijos">tiene Hijos</string>
+    <string name="NoTieneHijos">no tiene Hijos</string>
+    <string name="MayorEdad">Mayor De Edad</string>
+    <string name="MenorEdad">Menor De Edad</string>
+    <string name="FaltaNombre">Falta el Nombre</string>
+    <string name="FaltaApellidos">Falta Los Apellidos</string>
+    <string name="FaltaEdad">Falta La Edad</string>
 </resources>

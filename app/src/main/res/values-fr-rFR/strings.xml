@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Datos personale</string>
+    <string name="app_name">Datos personales</string>
     <string name="txtNombre">Nom:</string>
     <string name="edtNombre">Écris ton nom ici</string>
     <string name="txtApellidos">Le nom:</string>
@@ -13,4 +13,15 @@
     <string name="txtEstadoCivil">État civil:</string>
     <string name="txtHijos">Les enfants:</string>
     <string name="txtGenerar">Générer</string>
+    <string name="Casado">Marié</string>
+    <string name="Separado">Séparé</string>
+    <string name="Viudo">Veuf</string>
+    <string name="Otro">Autres</string>
+    <string name="TieneHijos">a des enfants</string>
+    <string name="NoTieneHijos">a pas d’enfants</string>
+    <string name="MayorEdad">âge avancé</string>
+    <string name="MenorEdad">plus jeune âge</string>
+    <string name="FaltaNombre">Plus jeune âge</string>
+    <string name="FaltaApellidos">Manque les noms de famille</string>
+    <string name="FaltaEdad">Manque de l’âge</string>
 </resources>

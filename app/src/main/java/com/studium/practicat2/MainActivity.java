@@ -25,7 +25,6 @@ public class MainActivity extends AppCompatActivity {
     RadioGroup radGeneros;
     RadioButton radHombre, radMujer;
     Spinner spLista;
-
     Switch swHijos;
     Button btnGenerar;
     ImageButton imgValores;
@@ -53,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
         imgValores = findViewById(R.id.imgValores);
         txtResultado = findViewById(R.id.txtResultado);
 
-        String[] datos = new String[] {"","Casado", "Separado", "Viudo", "Otro"};
+        String[] datos = new String[] {getResources().getString(R.string.Vacio),getResources().getString(R.string.Casado),getResources().getString(R.string.Separado),getResources().getString(R.string.Viudo),getResources().getString(R.string.Otro)};
         ArrayAdapter<String> adaptador = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, datos);
         spLista.setAdapter(adaptador);
 
@@ -61,26 +60,35 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
 
-                if (checkedId == R.id.radHombre) generoSeleccionado = "Hombre";
-                if (checkedId == R.id.radMujer) generoSeleccionado = "Mujer";
+                if (checkedId == R.id.radHombre) generoSeleccionado = getResources().getString(R.string.radHombre);
+                if (checkedId == R.id.radMujer) generoSeleccionado = getResources().getString(R.string.radMujer);
             }
-
         });
         swHijos.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (swHijos.isChecked() == true)
                 {
-                    seleccionado = "tiene hijos";
+                    seleccionado = getResources().getString(R.string.TieneHijos);
                 }
-                else if (swHijos.isChecked() == false)
+                if (swHijos.isChecked() == false)
                 {
-                    seleccionado = "no tiene hijos";
+                    seleccionado = getResources().getString(R.string.NoTieneHijos);
                 }
             }
         });
+        spLista.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                spLista.getSelectedItemPosition();
+                spLista.getSelectedItem();
+            }
+            @Override
+            public void onNothingSelected(AdapterView<?> parent)
+            {
 
-
+            }
+        });
         imgValores.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -91,8 +99,7 @@ public class MainActivity extends AppCompatActivity {
                 radMujer.setChecked(false);
                 swHijos.setChecked(false);
                 spLista.setSelection(0);
-                //txtResultado.setText("");
-
+                txtResultado.setText("");
             }
         });
         btnGenerar.setOnClickListener(new View.OnClickListener() {
@@ -101,49 +108,31 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 if (edtNombre.getText().toString().isEmpty()) {
-                    edtNombre.setText("Falta el Nombre") ;
-                    edtNombre.setTextColor(getColor(R.color.radMujer));
-                    txtResultado.setText("Error al ingresar los datos");
+                    txtResultado.setText(getResources().getString(R.string.FaltaNombre));
+                    txtResultado.setTextColor(getColor(R.color.radMujer));
                 }
-                if (edtApellidos.getText().toString().isEmpty())
-                {
-                    edtApellidos.setText("Falta los Apellidos");
-                    edtApellidos.setTextColor(getColor(R.color.radMujer));
-                    txtResultado.setText(edtNombre.getText().toString() + "," + edadResultado + "," + generoSeleccionado + " " + spLista.getSelectedItem().toString() + " y " + seleccionado);
-                    txtResultado.setText("Error");
-
-                }
-                if (edtEdad.getText().toString().isEmpty())
-                {
-                    edtEdad.setText("Falta la edad");
-                    edtEdad.setTextColor(getColor(R.color.radMujer));
-                    txtResultado.setText(edtNombre.getText().toString() + "," + edtApellidos.getText().toString() + "," + generoSeleccionado + " " + spLista.getSelectedItem().toString() + " y " + seleccionado);
-                    txtResultado.setText("Error");
-                }
-                else {
-
-
-                    if (Integer.parseInt(edtEdad.getText().toString()) >= 18) {
-                        edadResultado = "Mayor De Edad";
-                    } else {
-                        edadResultado = "Menor De Edad";
-                    }
-
-
-                    spLista.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                        @Override
-                        public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                            spLista.getSelectedItemPosition();
-                            spLista.getSelectedItem();
+                else{
+                        if (edtApellidos.getText().toString().isEmpty()) {
+                            txtResultado.setText(getResources().getString(R.string.FaltaApellidos));
+                            txtResultado.setTextColor(getColor(R.color.radMujer));
+                        } else {
+                            if (edtEdad.getText().toString().isEmpty()) {
+                                txtResultado.setText(getResources().getString(R.string.FaltaEdad));
+                                txtResultado.setTextColor(getColor(R.color.radMujer));
+                            } else {
+                                if (Integer.parseInt(edtEdad.getText().toString()) >= 18) {
+                                    edadResultado = getResources().getString(R.string.MayorEdad);
+                                } else {
+                                    edadResultado = getResources().getString(R.string.MenorEdad);
+                                }
+                                txtResultado.setText(edtApellidos.getText().toString() + " " + edtNombre.getText().toString() + "," + edadResultado + "," + generoSeleccionado + " " + spLista.getSelectedItem().toString() + " y " + seleccionado );
+                                txtResultado.setTextColor(getColor(R.color.negro));
+                            }
                         }
 
-                        @Override
-                        public void onNothingSelected(AdapterView<?> parent) {
-
-                        }
-                    });
-                    txtResultado.setText(edtApellidos.getText().toString() + " " + edtNombre.getText().toString() + "," + edadResultado + "," + generoSeleccionado + " " + spLista.getSelectedItem().toString() + " y " + seleccionado );
                 }
+
+
             }
 });
     }}

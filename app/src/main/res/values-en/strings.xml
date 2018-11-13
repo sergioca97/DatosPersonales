@@ -13,4 +13,15 @@
     <string name="txtEstadoCivil">Civil Status</string>
     <string name="txtHijos">Children:</string>
     <string name="txtGenerar">Generate</string>
+    <string name="Casado">Married</string>
+    <string name="Separado">Separated</string>
+    <string name="Viudo">Widower</string>
+    <string name="Otro">Other</string>
+    <string name="TieneHijos">has children</string>
+    <string name="NoTieneHijos">has no Children</string>
+    <string name="MayorEdad">older age</string>
+    <string name="MenorEdad">younger age</string>
+    <string name="FaltaNombre">Missing name</string>
+    <string name="FaltaApellidos">Missing surnames</string>
+    <string name="FaltaEdad">Missing age</string>
 </resources>
