@@ -1,11 +1,188 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:colorBackground">?attr/colorButtonNormal</item>
+        <item name="android:navigationBarColor">@color/negro</item>
+    </style>
+
+    <style name="NuevoTema" parent="AppTheme"></style>
+
+    <style name="LayoutVertical" parent="AppTheme">
+
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">20dp</item>
+        <item name="android:layout_marginRight">20dp</item>
+        <item name="android:layout_marginTop">30dp</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:padding">@dimen/dimensionVertical</item>
+    </style>
+
+    <style name="LayoutHorizontal" parent="AppTheme">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:padding">@dimen/dimensionHorizontal</item>
+    </style>
+
+    <style name="LayoutHorizontal.espacioTop" parent="LayoutHorizontal">
+        <item name="android:layout_marginTop">10dp</item>
+    </style>
+
+    <style name="LayoutHorizontal.espacioTop.centrado" parent="LayoutHorizontal">
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="styleTxt" parent="AppTheme">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="styleTxt.Nombre" parent="styleTxt">
+        <item name="android:id">@id/txtNombre</item>
+        <item name="android:text">@string/txtNombre</item>
+        <item name="android:fontFamily">@font/newamsterdam</item>
+    </style>
+
+    <style name="styleTxt.Apellidos" parent="styleTxt">
+        <item name="android:id">@id/txtApellidos</item>
+        <item name="android:text">@string/txtApellidos</item>
+        <item name="android:fontFamily">@font/newamsterdam</item>
+    </style>
+
+    <style name="styleTxt.Edad" parent="styleTxt">
+        <item name="android:id">@id/txtEdad</item>
+        <item name="android:text">@string/txtEdad</item>
+        <item name="android:fontFamily">@font/newamsterdam</item>
+    </style>
+
+    <style name="styleTxt.Genero" parent="styleTxt">
+        <item name="android:id">@id/txtGenero</item>
+        <item name="android:text">@string/txtGenero</item>
+        <item name="android:fontFamily">@font/pacifico</item>
+    </style>
+
+    <style name="styleTxt.Estado" parent="styleTxt">
+        <item name="android:id">@id/txtEstadoCivil</item>
+        <item name="android:text">@string/txtEstadoCivil</item>
+        <item name="android:fontFamily">@font/pacifico</item>
+    </style>
+
+    <style name="styleTxt.Hijos" parent="styleTxt">
+        <item name="android:id">@id/txtHijos</item>
+        <item name="android:text">@string/txtHijos</item>
+        <item name="android:fontFamily">@font/pacifico</item>
+    </style>
+
+    <style name="styleTxt.Resultado" parent="styleTxt">
+        <item name="android:id">@id/txtResultado</item>
+    </style>
+
+    <style name="edtPrincipal" parent="AppTheme">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">20dp</item>
+        <item name="android:ems">10</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="edtPrincipal.Nombre" parent="edtPrincipal">
+        <item name="android:id">@id/edtNombre</item>
+        <item name="android:hint">@string/edtNombre</item>
+        <item name="android:inputType">text|textCapWords</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="edtPrincipal.Apellidos" parent="edtPrincipal">
+        <item name="android:id">@id/edtApellidos</item>
+        <item name="android:hint">@string/edtApellidos</item>
+        <item name="android:inputType">text|textCapWords</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="edtPrincipal.Edad" parent="edtPrincipal">
+        <item name="android:id">@id/edtEdad</item>
+        <item name="android:hint">@string/edtEdad</item>
+        <item name="android:inputType">number</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_marginLeft">55dp</item>
+        <item name="android:layout_marginRight">30dp</item>
+    </style>
+
+    <style name="radioGroup" parent="AppTheme">
+        <item name="android:id">@id/radGeneros</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">20dp</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="radHombre" parent="AppTheme">
+        <item name="android:id">@id/radHombre</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:text">@string/radHombre</item>
+        <item name="android:textColor">@color/radHombre</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">@font/pacifico</item>
+    </style>
+
+    <style name="radMujer" parent="AppTheme">
+        <item name="android:id">@id/radMujer</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:text">@string/radMujer</item>
+        <item name="android:textColor">@color/radMujer</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">@font/pacifico</item>
+    </style>
+
+    <style name="spinner" parent="AppTheme">
+        <item name="android:id">@id/spLista</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:background">@android:drawable/btn_dropdown</item>
+        <item name="android:backgroundTint">@color/radMujer</item>
+        <item name="android:backgroundTintMode">multiply</item>
+        <item name="android:dropDownWidth">match_parent</item>
+    </style>
+
+    <style name="swHijos" parent="AppTheme">
+        <item name="android:id">@id/swHijos</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_marginRight">200dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:text">"."</item>
+        <item name="android:textOff">"No"</item>
+        <item name="android:textOn">"Si"</item>
+    </style>
+
+    <style name="btnGenerar" parent="AppTheme">
+        <item name="android:id">@id/btnGenerar</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:text">@string/txtGenerar</item>
+        <item name="android:fontFamily">@font/pacifico</item>
+    </style>
+
+    <style name="btnEliminar" parent="AppTheme">
+        <item name="android:id">@id/imgValores</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:src">@android:drawable/ic_delete</item>
     </style>
 
 </resources>
